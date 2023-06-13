@@ -1,4 +1,4 @@
-﻿namespace Laptop.Enums;
+﻿namespace LaptopClass.Entity.Laptop.Enums;
 
 public enum ELaptopType
 {

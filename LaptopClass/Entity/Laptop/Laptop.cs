@@ -1,6 +1,6 @@
-﻿using Laptop.Enums;
+﻿using LaptopClass.Entity.Laptop.Enums;
 
-namespace LaptopClass
+namespace LaptopClass.Entity.Laptop
 {
     public class Laptop
     {
@@ -12,5 +12,11 @@ namespace LaptopClass
         public double Weight { get; set; }
         //public Ram Ram { get; set; }
         public EColorType Color { get; set; } = 0;
+        public Laptop() : this("acer")
+        { }
+        public Laptop(string name)
+        {
+            Name = name;
+        }
     }
 }
