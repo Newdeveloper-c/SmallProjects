@@ -10,7 +10,7 @@ Beverage beverage2 = new Beverage
 {
     Name = "Pepsi",
     Manufacturer = "PepsiCola co",
-    Origin = "USA",
+    Origin = "USA", 
     Type = EBeverageType.SoftDrink,
     IsCarbonated = true,
     Volume = 0.5,
@@ -48,3 +48,6 @@ beverage4.Ingredients = new List<Tuple<string, int, int>>()
 Console.WriteLine(beverage4.CalculateCalories());  
 beverage4.PrintAllInfo();
 Console.WriteLine();
+
+int a = 5, b = a;
+string s = "afdasf";

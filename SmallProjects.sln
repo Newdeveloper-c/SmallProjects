@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaptopClass", "LaptopClass\LaptopClass.csproj", "{62AB2D9A-CAFB-45DE-A0BD-7DB8C8E2BF7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bavarage", "Bavarage\Bavarage.csproj", "{BE54EA4F-3B4E-46CC-AFA5-D355A1DE8257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bavarage", "Bavarage\Bavarage.csproj", "{BE54EA4F-3B4E-46CC-AFA5-D355A1DE8257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{07147051-FD8E-4037-B93F-15606A2C37E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BE54EA4F-3B4E-46CC-AFA5-D355A1DE8257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE54EA4F-3B4E-46CC-AFA5-D355A1DE8257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE54EA4F-3B4E-46CC-AFA5-D355A1DE8257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07147051-FD8E-4037-B93F-15606A2C37E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07147051-FD8E-4037-B93F-15606A2C37E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07147051-FD8E-4037-B93F-15606A2C37E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07147051-FD8E-4037-B93F-15606A2C37E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
