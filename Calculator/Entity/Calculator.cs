@@ -15,13 +15,15 @@ public static partial class Calculator
         do
         {
             input = Console.ReadLine();
-            
+
             //making some corrections for input
-            while(input.First() == ' ')
-                input.Remove(0);
             if (input == string.Empty)
                 continue;
+            while (input[0] == ' ')
+                input = input.Remove(0, 1);
             input.ToLower();
+            while (input.Contains("."))
+                input = input.Replace(".", ",");
 
             list.Add(input);
         }
@@ -55,15 +57,6 @@ public static partial class Calculator
                     continue;
                 }
 
-                if (item.Length == 1)
-                {
-                    if (charOperationName.Contains(item))
-                        operation = char.Parse(item);
-                    else
-                        throw new Exception("Noto'g'ri matematik amal kiritildi !");
-                    continue;
-                }
-
                 if (item == piConstant)
                 {
                     result = Calculate(operation, result, Pi);
@@ -76,6 +69,15 @@ public static partial class Calculator
                     continue;
                 }
 
+                if (item.Length == 1)
+                {
+                    if (charOperationName.Contains(item))
+                        operation = char.Parse(item);
+                    else
+                        throw new Exception("Noto'g'ri matematik amal kiritildi !");
+                    continue;
+                }                
+
                 var splittedItem = item.Split(' ');
                 if (splittedItem.Length > 3)
                     throw new Exception("Xato malumot kiritilgan !!!");
@@ -87,9 +89,13 @@ public static partial class Calculator
                         isNotContains = false;
                         double tempResult;
                         if (splittedItem.Length == 3)
-                            tempResult = Calculate(word, splittedItem[1], splittedItem[2]);
+                            tempResult = Calculate(word, 
+                                                   splittedItem[1], 
+                                                   splittedItem[2]);
                         tempResult = Calculate(word, splittedItem[1]);
-                        result = Calculate(operation, result, tempResult);
+                        result = Calculate(operation, 
+                                           result, 
+                                           tempResult);
                         break;
                     }
 
@@ -97,15 +103,28 @@ public static partial class Calculator
                     throw new Exception("Notog'ri malumot kiritilgan !!!");
 
             }
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.Gray;
+
             Console.WriteLine(result);
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
         catch (Exception e)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.Gray;
+            
             Console.WriteLine(e.Message);
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
     
-    private static double Calculate(char operation, double result, double temp)
+    private static double Calculate(char operation, double result, double temp = 0)
     {
         if (operation == '?')
             throw new Exception("Notog'ri kiruvchi qiymat. Arifmetik amal topilmadi !!!");
@@ -125,29 +144,40 @@ public static partial class Calculator
                 return Divide(result, temp);
                 break;
             case '^':
-                if(temp != (int)temp)
+                if(temp == (int)temp)
                     return Power(result, (int)temp);
                 else
                     return Power(result, temp);
                 break;
             case '%':
-                if (result != (int)result || temp != (int)temp)
+                if (result != (int)result || 
+                    temp != (int)temp)
                     throw new Exception("Qoldiqli bo'lishda xatolik. Noto'g'ri qiymat kiritilgan !!!");
                 return ModulDivision((int)result, (int)temp);
-                break;
+                break;            
             default:
                 return result;
             return result;
         }
     }
 
-    private static double Calculate(string operation, string number, string baseNumber = "0")
+    private static double Calculate(string operation, 
+                                    string number, 
+                                    string baseNumber = "0")
     {
         double result = 0;
-        if(double.TryParse(number, out double dnumber) == false || double.TryParse(baseNumber, out double dbaseNumber) == false) 
+        //if (number == piConstant)
+        if(double.TryParse(number, out double dnumber) == false || 
+            double.TryParse(baseNumber, out double dbaseNumber) == false) 
             throw new Exception("Noto'g'ri qiymat !!!");
         switch(operation)
         {
+            case "!":
+                if (dnumber == (int)dnumber)
+                    return Factorial((int)dnumber);
+                else
+                    throw new Exception("Faktorial uchun butun son kiriting !!!");
+                break;
             case "log":
                 if (baseNumber == "0")
                     result = Log(dnumber, 10);

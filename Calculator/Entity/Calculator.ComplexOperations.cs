@@ -44,7 +44,7 @@ public static partial class Calculator
 
     private static double Log(double number, double baseNumber)
     {
-        if (number < 0 || baseNumber < 0 || baseNumber == 1)
+        if (number <= 0 || baseNumber <= 0 || baseNumber == 1)
             throw new Exception("Logarifmga xato qiymat kiritilgan !!!");
         return Math.Log(number, baseNumber);
     }

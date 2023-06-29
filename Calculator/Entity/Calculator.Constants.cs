@@ -11,6 +11,6 @@ public static partial class Calculator
     private const string charOperationName = "+-*/^%!";
     private const string piConstant = "pi";
     private const string eConstant = "e";
-    private const string wordOperationName = "log ln sqrt sin cos tan cot asin acos atan acot";
+    private const string wordOperationName = "! log ln sqrt sin cos tan cot asin acos atan acot";
 
 }
