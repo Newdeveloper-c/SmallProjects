@@ -12,5 +12,5 @@ public static partial class Calculator
     => a * b;
 
     private static double Divide(double a = 0, double b = 1)
-    => a / b;
+    => b != 0 ? a / b : throw new Exception("0 ga bo'lish mumkin emas !!!");
 }

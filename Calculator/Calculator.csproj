@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Entity\Calculator.Trigonometry.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Entity\Calculator.Trigonometry.cs" />
-  </ItemGroup>
-
 </Project>

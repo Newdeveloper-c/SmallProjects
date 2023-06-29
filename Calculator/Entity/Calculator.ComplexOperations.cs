@@ -32,6 +32,9 @@ public static partial class Calculator
 
     private static long Factorial(int number)
     {
+        if (number < 0)
+            throw new Exception("Faktorialga musbat qiymat kiritilishi kerak !!!");
+
         long answer = 1;
         while (number > 0)
             answer *= number--;
@@ -40,5 +43,10 @@ public static partial class Calculator
     }
 
     private static double Log(double number, double baseNumber)
-    => Math.Log(number, baseNumber);
+    {
+        if (number < 0 || baseNumber < 0 || baseNumber == 1)
+            throw new Exception("Logarifmga xato qiymat kiritilgan !!!");
+        return Math.Log(number, baseNumber);
+    }
+
 }

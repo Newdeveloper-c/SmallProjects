@@ -15,10 +15,10 @@ public static partial class Calculator
 	=> 1 / Math.Tan(number);
 
 	private static double ArcSin(double number)
-	=> Math.Asin(number);
+	=> number >= -1 && number <= 1 ? Math.Asin(number) : throw new Exception("asin qiymati -1 va 1 orlig'ida bo'lishi shart !!!");
 
 	private static double ArcCos(double number)
-	=> Math.Acos(number);
+	=> number >= -1 && number <= 1 ? Math.Acos(number) : throw new Exception("acos qiymati -1 va 1 orlig'ida bo'lishi shart !!!");
 
 	private static double ArcTan(double number)
 	=> Math.Atan(number);
