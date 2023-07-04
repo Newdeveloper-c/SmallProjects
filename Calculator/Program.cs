@@ -2,7 +2,7 @@
 
 //namespace Namespace;
 
-//Calculator.Entity.Calculator.Info();
+Calculator.Entity.Calculator.Info();
 while(true)
 {
     Calculator.Entity.Calculator.GetInput();

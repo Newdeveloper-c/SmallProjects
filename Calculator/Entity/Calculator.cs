@@ -89,9 +89,9 @@ public static partial class Calculator
                         isNotContains = false;
                         double tempResult;
                         if (splittedItem.Length == 3)
-                            tempResult = Calculate(word, 
-                                                   splittedItem[1], 
-                                                   splittedItem[2]);
+                            tempResult = Calculate(word,
+                                                   splittedItem[1],
+                                                   splittedItem[2]); 
                         tempResult = Calculate(word, splittedItem[1]);
                         result = Calculate(operation, 
                                            result, 
@@ -157,7 +157,6 @@ public static partial class Calculator
                 break;            
             default:
                 return result;
-            return result;
         }
     }
 
@@ -251,7 +250,8 @@ public static partial class Calculator
                           "\t- acos son, sonning arccosinusi\n" +
                           "\t- atan son, sonning arctangensi\n" +
                           "\t- acot son, sonning arccotangensi\n" +
-                          "!!! Trigonometrik formulalar radianlarda hisonladi !!!\n");
+                          "!!! Trigonometrik formulalar radianlarda hisonladi !!!\n" +
+                          "\nNatijani chiqarish uchun  =  belgisini kiriting");
 
         //Console.WriteLine("\t\t!!! DIQQAT !!!\n" +
         //                  "Arifmetik amallarni sondan keyin kiriting. Keyin esa yana son yozing.\n" +
