@@ -8,13 +8,7 @@ public class Parallelogram : IShape
     public double Height { get; set; }
     public double SideLength { get; set; }
 
-    public double CalculateArea()
-    {
-        return Base * Height;
-    }
+    public double CalculateArea() => Base * Height;
 
-    public double CalculatePerimeter()
-    {
-        return 2 * (Base + SideLength);
-    }
+    public double CalculatePerimeter() => 2 * (Base + SideLength);
 }

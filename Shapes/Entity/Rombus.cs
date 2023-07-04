@@ -7,13 +7,7 @@ public class Rombus : IShape
     public double SideLength { get; set; }
     public double Height { get; set; }
 
-    public double CalculateArea()
-    {
-        return SideLength * Height;
-    }
+    public double CalculateArea() => SideLength * Height;
 
-    public double CalculatePerimeter()
-    {
-        return 4 * SideLength;
-    }
+    public double CalculatePerimeter() => 4 * SideLength;
 }

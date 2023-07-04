@@ -6,13 +6,7 @@ public class Square : IShape
 {
     public double SideLength { get; set; }
 
-    public double CalculateArea()
-    {
-        return SideLength * SideLength;
-    }
+    public double CalculateArea() => SideLength * SideLength;
 
-    public double CalculatePerimeter()
-    {
-        return 4 * SideLength;
-    }
+    public double CalculatePerimeter() => 4 * SideLength;
 }

@@ -10,13 +10,7 @@ public class Triangle : IShape
     public double SideB { get; set; }
     public double SideC { get; set; }
 
-    public double CalculateArea()
-    {
-        return 0.5 * Base * Height;
-    }
+    public double CalculateArea() => 0.5 * Base * Height;
 
-    public double CalculatePerimeter()
-    {
-        return SideA + SideB + SideC;
-    }
+    public double CalculatePerimeter() => SideA + SideB + SideC;
 }

@@ -7,7 +7,8 @@ public class Ellipse : IShape
     public double MajorAxis { get; set; }
     public double MinorAxis { get; set; }
 
-    public double CalculateArea() => Math.PI * MajorAxis * MinorAxis;
+    public double CalculateArea() 
+    => Math.PI * MajorAxis * MinorAxis;
 
     public double CalculatePerimeter()
     {

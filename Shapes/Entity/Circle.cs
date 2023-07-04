@@ -9,13 +9,9 @@ public class Circle : IShape
     public Circle(double radius = 0)
     => this.Radius = radius;
 
-    public double CalculatePerimeter()
-    {
-        return 2 * Math.PI * Radius; 
-    }
+    public double CalculatePerimeter() 
+    => 2 * Math.PI * Radius;
 
-    public double CalculateArea()
-    {
-        return Math.PI * Radius * Radius;
-    }
+    public double CalculateArea() 
+    => Math.PI * Radius * Radius;
 }

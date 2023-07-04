@@ -13,13 +13,7 @@ public class Rectangle : IShape
         Width = width;
     }
 
-    public double CalculateArea()
-    {
-        return Length * Width;
-    }
+    public double CalculateArea() => Length * Width;
 
-    public double CalculatePerimeter()
-    {
-        return 2 * (Length + Width);
-    }
+    public double CalculatePerimeter() => 2 * (Length + Width);
 }

@@ -17,8 +17,6 @@ public class Heptagon : IShape
         return area;
     }
 
-    public double CalculatePerimeter()
-    {
-        return NumberOfSides * SideLength;
-    }
+    public double CalculatePerimeter() 
+    => NumberOfSides * SideLength;
 }

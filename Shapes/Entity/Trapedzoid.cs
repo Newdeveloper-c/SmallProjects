@@ -10,13 +10,7 @@ public class Trapedzoid : IShape
     public double Side1 { get; set; }
     public double Side2 { get; set; }
 
-    public double CalculateArea()
-    {
-        return 0.5 * (Base1 + Base2) * Height;
-    }
+    public double CalculateArea() => 0.5 * (Base1 + Base2) * Height;
 
-    public double CalculatePerimeter()
-    {
-        return Base1 + Base2 + Side1 + Side2;
-    }
+    public double CalculatePerimeter() => Base1 + Base2 + Side1 + Side2;
 }
